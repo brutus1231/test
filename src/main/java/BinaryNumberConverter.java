@@ -11,7 +11,7 @@ public class BinaryNumberConverter {
 
     private static String convert(String digitStr) {
         Integer digit = Integer.parseInt(digitStr);
-        Integer digitDiv2 = Integer.parseInt(digitStr) / 2;
+        Integer digitDiv2 = digit / 2;
         if (digit <= 1) {
             return digit.toString();
         }
