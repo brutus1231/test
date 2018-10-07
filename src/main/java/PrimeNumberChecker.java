@@ -1,4 +1,6 @@
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class PrimeNumberChecker {
 
@@ -11,6 +13,25 @@ public class PrimeNumberChecker {
         printPrimes(n);
         long endTime = System.currentTimeMillis();
         System.out.println(((double)(endTime - startTime))/1000);
+    }
+
+    private static void printEratostenesPrimes(int n) {
+        boolean[] primes = new boolean[n];
+
+        Arrays.fill(primes, true);
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+
+        }
+
+        for (int i = 2; i <= n; i++) {
+            if (primes[i] == true) {
+                System.out.println(i);
+            }
+        }
+//        IntStream.range(1, n)
+//                .filter(t -> primes[t] == true)
+//                .forEach(System.out::println);
+
     }
 
     private static void printPrimes(int n) {
