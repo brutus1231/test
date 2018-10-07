@@ -12,11 +12,10 @@ public class BinaryNumberConverter {
     private static String convert(String digitStr) {
         Integer digit = Integer.parseInt(digitStr);
         Integer digitDiv2 = Integer.parseInt(digitStr) / 2;
-        Integer modulo = Integer.parseInt(digitStr) % 2;
         if (digit <= 1) {
             return digit.toString();
         }
-        return convert(digitDiv2.toString()) + modulo;
+        return convert(digitDiv2.toString()) + digit % 2;
     }
 
 
