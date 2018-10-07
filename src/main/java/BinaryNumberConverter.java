@@ -13,9 +13,8 @@ public class BinaryNumberConverter {
         Integer digit = Integer.parseInt(digitStr);
         Integer digitDiv2 = Integer.parseInt(digitStr) / 2;
         Integer modulo = Integer.parseInt(digitStr) % 2;
-        if (digit < 1) {
-            if(digit == 2)return "10";
-            else return digitDiv2.toString();
+        if (digit <= 1) {
+            return digit.toString();
         }
         return convert(digitDiv2.toString()) + modulo;
     }
